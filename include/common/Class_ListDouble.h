@@ -1,6 +1,8 @@
-/* =====================================================================================
- *	JHListDouble Ver, 1.0
+/**
+ * # JHListDouble Ver, 1.0
  * 
+ * Author: Juhoon Kim (kimjuhoon@gmail.com)
+ *
  */
 
 #ifndef JHDOUBLELINKLIST_C_

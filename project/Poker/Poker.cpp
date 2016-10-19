@@ -1,3 +1,29 @@
+/**
+ * # Poker
+ * 
+ * Author: Juhoon Kim (kimjuhoon@gmail.com)
+ *
+ * Legal Disclaimer
+ *
+ * Game titles and content in this collection are trademarked by other companies.
+ * This code is written only for the educational purpose and will not be used
+ * commercially. Thus, you must take the entire liability for any damage caused by
+ * using this code.
+ *
+ */
+
+/**
+ * # Attribution
+ *
+ * This program internally uses the poker hand evaluator developed by Kevin L.
+ *
+ *  //----------------------------------------------------------------------//
+ *  //	Kevin L. Suffecool'5 Poker Hand Evaluator 
+ *  //	Web Site  - http://www.suffecool.net/poker/evaluator.html
+ *  //----------------------------------------------------------------------//
+ *
+ */
+
 #include "common/StdAfx.h"
 #include "common/Class_Poker.h"
 #include "common/Class_Ansi.h"

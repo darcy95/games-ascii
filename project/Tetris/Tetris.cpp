@@ -1,3 +1,18 @@
+/**
+ * # Tetris
+ * 
+ * Author: Juhoon Kim (kimjuhoon@gmail.com)
+ *
+ * Legal Disclaimer
+ *
+ * Game titles and content in this collection are trademarked by other companies.
+ * This code is written only for the educational purpose and will not be used
+ * commercially. Thus, you must take the entire liability for any damage caused by
+ * using this code.
+ *
+ */
+
+
 #include "common/StdAfx.h"
 #include "common/Class_Tetris.h"
 #include "common/Class_Ansi.h"

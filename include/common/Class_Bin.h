@@ -1,6 +1,8 @@
-/* =====================================================================================
- *	JHBin Ver, 0.1
+/**
+ * # JHBin Ver, 0.1
  * 
+ * Author: Juhoon Kim (kimjuhoon@gmail.com)
+ *
  */
 
 #ifndef _JHBIN_C_

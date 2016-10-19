@@ -1,6 +1,8 @@
-/* =====================================================================================
- *	JHMysql Ver, 1.0
+/**
+ * # JHMysql Ver, 1.0
  * 
+ * Author: Juhoon Kim (kimjuhoon@gmail.com)
+ *
  */
 
 #ifndef _JHMYSQL_C_

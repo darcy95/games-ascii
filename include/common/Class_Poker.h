@@ -1,21 +1,39 @@
-/* =====================================================================================
- *	JHPoker Ver, 1.0
+/**
+ *
+ * # JHPoker Ver, 1.0
  * 
+ * Author: Juhoon Kim (kimjuhoon@gmail.com)
+ *
+ * Legal Disclaimer
+ *
+ * Game titles and content in this collection are trademarked by other companies.
+ * This code is written only for the educational purpose and will not be used
+ * commercially. Thus, you must take the entire liability for any damage caused by
+ * using this code.
+ *
  */
 
 #ifndef _JHPOKER_C_
 #define _JHPOKER_C_
 
-//--------------------------------------------------------------------------------------//
-//	Kevin L. Suffecool'5 Poker Hand Evaluator 
-//	Web Site  - http://www.suffecool.net/poker/evaluator.html
-//--------------------------------------------------------------------------------------//
-/*
-** this is a table lookup for all "flush" hands (e.g.  both
-** flushes and straight-flushes.  entries containing a zero
-** mean that combination is not possible with a five-card
-** flush hand.
-*/
+/**
+ * # Attribution
+ *
+ * This program internally uses the poker hand evaluator developed by Kevin L.
+ *
+ *  //----------------------------------------------------------------------//
+ *  //	Kevin L. Suffecool'5 Poker Hand Evaluator 
+ *  //	Web Site  - http://www.suffecool.net/poker/evaluator.html
+ *  //----------------------------------------------------------------------//
+ *
+ */
+
+/**
+ * this is a table lookup for all "flush" hands (e.g.  both
+ * flushes and straight-flushes.  entries containing a zero
+ * mean that combination is not possible with a five-card
+ * flush hand.
+ */
 short flushes[] = {
 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,

@@ -1,7 +1,17 @@
-/* =====================================================================================
- *	JHTetris Ver, 1.0
+/**
+ * # JHTetris Ver, 1.0
+ *
+ * Author: Juhoon Kim (kimjuhoon@gmail.com)
  * 
+ * Legal Disclaimer
+ *
+ * Game titles and content in this collection are trademarked by other companies.
+ * This code is written only for the educational purpose and will not be used
+ * commercially. Thus, you must take the entire liability for any damage caused by
+ * using this code.
+ *
  */
+
 
 #ifndef _JHTETRIS_C_
 #define _JHTETRIS_C_

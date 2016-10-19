@@ -1,5 +1,7 @@
-/* =====================================================================================
- *	JHFileIO Ver, 0.1
+/**
+ * # JHFileIO Ver, 0.1
+ *
+ * Author: Juhoon Kim (kimjuhoon@gmail.com)
  * 
  *	       open  stream for truncate create starting                            
  *	mode   read    write    file     file   position                            
