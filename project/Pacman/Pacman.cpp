@@ -12,15 +12,11 @@
  *
  */
 
-#include "common/StdAfx.h"
-#include "common/Class_AStar.h"
-#include "common/Class_Pacman.h"
-#include "common/Class_Ansi.h"
-#include "common/Func_Inputk.h"
+#include "libpacman.h"
 
 #define	PROGRAM_NAME	"PACMAN"
-#define PROGRAM_VER		"Ver, 1.0"
-#define PROGRAM_URL		"https://www.github.com/darcy95/games-ascii"
+#define PROGRAM_VER	"Ver, 1.0"
+#define PROGRAM_URL	"https://www.github.com/darcy95/games-ascii"
 
 JHAnsi		g_Ansi;
 JHPacman	g_Pacman;

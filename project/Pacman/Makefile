@@ -1,20 +1,20 @@
-LIBDIR      =  ../../
-Compiler	= g++
-LibDir		= -L$(LIBDIR)lib 
-IncDir		= -I$(LIBDIR)include -I$(LIBDIR)src
-Linker		= -lpthread
-Del		= rm -rf
-SrcFile		= Pacman.cpp
-ObjFile		= Pacman.o
-ExeFile		= Pacman
+HOME      	=  ../..
+CC		= g++
+LIBDIR		= -L$(HOME)/lib 
+INCDIR		= -I$(HOME)/inc
+CFLAGS		= -Wl,-rpath=$(HOME)/lib/pacman
+OPT		= -lpthread
+RM		= rm -rf
+SRC		= Pacman.cpp
+OBJ		= Pacman.o
+EXE		= Pacman
 
-$(ExeFile) : $(ObjFile)
-	$(Del) $(ExeFile)
-	$(Compiler) $(ObjFile) -o $(ExeFile) $(Linker)
-	$(Del) $(ObjFile)
+$(EXE) : $(OBJ)
+	$(CC) $(LIBDIR) $(INCDIR) $(OPT) $(CFLAGS) $(OBJ) -o $(EXE) -lpacman
 
-$(ObjFile) : $(SrcFile)
-	$(Compiler) -c $(SrcFile) $(IncDir) $(LibDir) -o $(ObjFile)
+$(OBJ) : $(SRC)
+	$(CC) $(CFLAGS) -c $(SRC) $(INCDIR) $(LIBDIR) -o $(OBJ)
 
 clean :
-	$(Del) $(ObjFile)
+	$(RM) $(OBJ)
+	$(RM) $(EXE)
