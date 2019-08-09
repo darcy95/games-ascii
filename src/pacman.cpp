@@ -12,7 +12,7 @@
  *
  */
 
-#include "libpacman.h"
+#include "pacman.h"
 
 JHPacman::JHPacman()
 {

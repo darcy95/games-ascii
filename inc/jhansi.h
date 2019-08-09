@@ -8,8 +8,9 @@
 #ifndef _JHANSI_C_
 #define _JHANSI_C_
 
-#include "jhstd.h"
+#include <stdio.h>
 #include <stdarg.h>
+#include "jhstd.h"
 
 //--------------------------------------------------------------------------------------//
 

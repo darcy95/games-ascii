@@ -1,20 +1,22 @@
-LIBDIR      =  ../../
-Compiler	= g++
-LibDir		= -L$(LIBDIR)lib 
-IncDir		= -I$(LIBDIR)include -I$(LIBDIR)src
-Linker		= -lpthread
-Del			= rm -rf
-SrcFile		= Tetris.cpp
-ObjFile		= Tetris.o
-ExeFile		= Tetris
+BASE   = ../..
+CC     = g++
+LIBDIR = $(BASE)/lib 
+INCDIR = $(BASE)/inc
+OPT    = -lpthread
+RM     = rm -rf
+OBJ    = Tetris.o tetris_ext.o
+EXE    = Tetris
 
-$(ExeFile) : $(ObjFile)
-	$(Del) $(ExeFile)
-	$(Compiler) $(ObjFile) -o $(ExeFile) $(Linker)
-	$(Del) $(ObjFile)
+$(EXE) : $(OBJ)
+	$(CC) -Wl,-rpath,$(LIBDIR) -I. -I$(INCDIR) $(OPT) $(OBJ) -o $(EXE) -ltetris
 
-$(ObjFile) : $(SrcFile)
-	$(Compiler) -c -g $(SrcFile) $(IncDir) $(LibDir) -o $(ObjFile)
+Tetris.o: Tetris.cpp tetris_ext.o
+	$(CC) -c Tetris.cpp -I$(INCDIR) -L$(LIBDIR) -o $@
+
+tetris_ext.o: tetris_ext.cpp
+	$(CC) -c tetris_ext.cpp -I$(INCDIR) -L$(LIBDIR) -o $@
 
 clean :
-	$(Del) $(ObjFile)
+	$(RM) $(OBJ)
+	$(RM) $(EXE)
+	$(RM) tetris_ext.o

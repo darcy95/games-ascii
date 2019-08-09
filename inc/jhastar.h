@@ -8,6 +8,8 @@
 #ifndef _JHASTAR_C_
 #define _JHASTAR_C_
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "jhstd.h"
 
 //--------------------------------------------------------------------------------------//

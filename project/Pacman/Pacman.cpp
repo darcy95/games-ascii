@@ -12,7 +12,7 @@
  *
  */
 
-#include "libpacman.h"
+#include "pacman.h"
 
 #define	PROGRAM_NAME	"PACMAN"
 #define PROGRAM_VER	"Ver, 1.0"

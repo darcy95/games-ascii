@@ -15,6 +15,17 @@
 #ifndef _JHPACMAN_C_
 #define _JHPACMAN_C_
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <ctype.h>
+#include <string.h>
+#include <assert.h>
+#include <errno.h>
+#include <error.h>
+#include <time.h>
+#include <getopt.h>
+
 #include "jhstd.h"
 #include "jhastar.h"
 #include "jhansi.h"

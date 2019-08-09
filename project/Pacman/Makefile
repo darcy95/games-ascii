@@ -1,8 +1,8 @@
-HOME      	=  ../..
+BASE      	= ../..
 CC		= g++
-LIBDIR		= -L$(HOME)/lib 
-INCDIR		= -I$(HOME)/inc
-CFLAGS		= -Wl,-rpath=$(HOME)/lib/pacman
+LIBDIR		= $(BASE)/lib 
+INCDIR		= $(BASE)/inc
+CFLAGS		= -Wl,-rpath,$(LIBDIR)
 OPT		= -lpthread
 RM		= rm -rf
 SRC		= Pacman.cpp
@@ -10,10 +10,10 @@ OBJ		= Pacman.o
 EXE		= Pacman
 
 $(EXE) : $(OBJ)
-	$(CC) $(LIBDIR) $(INCDIR) $(OPT) $(CFLAGS) $(OBJ) -o $(EXE) -lpacman
+	$(CC) $(CFLAGS) -L$(LIBDIR) -I$(INCDIR) $(OPT) $(CFLAGS) $(OBJ) -o $(EXE) -lpacman
 
 $(OBJ) : $(SRC)
-	$(CC) $(CFLAGS) -c $(SRC) $(INCDIR) $(LIBDIR) -o $(OBJ)
+	$(CC) -c $(SRC) -I$(INCDIR) -o $(OBJ)
 
 clean :
 	$(RM) $(OBJ)
