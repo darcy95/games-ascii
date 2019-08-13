@@ -9,8 +9,11 @@ SRC		= Tetris.cpp
 OBJ		= Tetris.o
 EXE		= Tetris
 
-all:
-	$(CC) $(CFLAGS) -L. -L$(LIBDIR) -I. -I$(INCDIR) tetris_ext.cpp -o tetris_ext.o -ltetris
+$(EXE) : $(OBJ)
+	$(CC) $(CFLAGS) -L$(LIBDIR) -I$(INCDIR) $(OPT) $(CFLAGS) $(OBJ) -o $(EXE) -ltetris
+
+$(OBJ) : $(SRC)
+	$(CC) -c $(SRC) -I$(INCDIR) -o $(OBJ)
 
 clean:
 	$(RM) *.o

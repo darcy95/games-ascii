@@ -12,7 +12,7 @@
  *
  */
 
-#include "tetris_ext.h"
+#include "tetris.h"
 
 #define	PROGRAM_NAME	"TETRIS"
 #define PROGRAM_VER	"Ver, 1.0"
@@ -21,7 +21,7 @@
 #define BRICK_SYMBOL	'#'
 
 JHAnsi		g_Ansi;
-JHTetrisExt	g_Tetris;
+JHTetris	g_Tetris;
 
 static void draw_title();
 static void draw_frame();
