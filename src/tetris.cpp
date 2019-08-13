@@ -53,17 +53,19 @@ void JHTetris::OnReset()
 		}
 	}
 
-	m_nPosX				= 0;
-	m_nPosY				= 0;
-	m_nTmpPosX			= 0;
-	m_nTmpPosY			= 0;
+	m_nPosX			= 0;
+	m_nPosY			= 0;
+	m_nTmpPosX		= 0;
+	m_nTmpPosY		= 0;
 	m_nCurrBlockKind	= 0;
 	m_nNextBlockKind	= 0;
 	m_nTickCount		= 0;
 	m_nMovePoint		= INIT_SPEED;
-	m_nScore			= 0;
-	m_nLine				= 0;
+	m_nScore		= 0;
+	m_nLine			= 0;
 	m_bGameBegin		= false;
+
+	m_nBlockCount 		= 0; // if this reaches BLOCK_COUNT, the speed of block moving will increase
 }
 
 void JHTetris::OnStart()
@@ -399,6 +401,22 @@ bool JHTetris::OnCheckComplete(int nLine)
 
 	if (bReturn)
 	{
+		// Block moving speed increases on every BLOCK_COUNT-th completion
+		if (m_nBlockCount < BLOCK_COUNT)
+		{
+			m_nBlockCount++;
+		}
+		else
+		{
+			if (m_nMovePoint > 0)
+			{
+				m_nMovePoint--;
+			}
+
+			m_nBlockCount = 0;
+		}
+		
+		// Actions required for the visualization of the game (must be derived)
 		OnLineCompleteAct(nLine);
 	}
 

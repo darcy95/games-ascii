@@ -2,11 +2,8 @@
 #define _JHTETRIS_EXT_C_
 
 //--------------------------------------------------------------------------------------//
-
 #include "tetris.h"
 
-#define BRICK_SYMBOL	'#'
-#define BLOCK_COUNT	24
 
 class JHTetrisExt : public JHTetris
 {
@@ -26,7 +23,6 @@ public:
 	void OnSettleAct();					//	블록을 바닥에 고정 하는 시점에 처리할 액션 (상속)
 
 public:
-	int	m_nBlockCount;					//	일정 갯수의 블록이 맞추어 질 때마다 하강 속도 증가
 };
 
 

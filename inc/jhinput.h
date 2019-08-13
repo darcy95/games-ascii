@@ -1,3 +1,6 @@
+#ifndef _JHINPUT_C_
+#define _JHINPUT_C_
+
 #include <stdio.h>
 #include <unistd.h>
 #include <termios.h>
@@ -125,3 +128,5 @@ void scanff()
 	}
 	while (c != '\n' && c != EOF); 
 } 
+
+#endif

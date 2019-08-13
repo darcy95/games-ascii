@@ -1,22 +1,17 @@
-BASE   = ../..
-CC     = g++
-LIBDIR = $(BASE)/lib 
-INCDIR = $(BASE)/inc
-OPT    = -lpthread
-RM     = rm -rf
-OBJ    = Tetris.o tetris_ext.o
-EXE    = Tetris
+BASE      	= ../..
+CC		= g++
+LIBDIR		= $(BASE)/lib 
+INCDIR		= $(BASE)/inc
+CFLAGS		= -Wl,-rpath,$(LIBDIR) -g -Wall
+OPT		= -lpthread
+RM		= rm -rf
+SRC		= Tetris.cpp
+OBJ		= Tetris.o
+EXE		= Tetris
 
-$(EXE) : $(OBJ)
-	$(CC) -Wl,-rpath,$(LIBDIR) -I. -I$(INCDIR) $(OPT) $(OBJ) -o $(EXE) -ltetris
+all:
+	$(CC) $(CFLAGS) -L. -L$(LIBDIR) -I. -I$(INCDIR) tetris_ext.cpp -o tetris_ext.o -ltetris
 
-Tetris.o: Tetris.cpp tetris_ext.o
-	$(CC) -c Tetris.cpp -I$(INCDIR) -L$(LIBDIR) -o $@
-
-tetris_ext.o: tetris_ext.cpp
-	$(CC) -c tetris_ext.cpp -I$(INCDIR) -L$(LIBDIR) -o $@
-
-clean :
-	$(RM) $(OBJ)
+clean:
+	$(RM) *.o
 	$(RM) $(EXE)
-	$(RM) tetris_ext.o

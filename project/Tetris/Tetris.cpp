@@ -18,6 +18,8 @@
 #define PROGRAM_VER	"Ver, 1.0"
 #define PROGRAM_URL	"https://www.github.com/darcy95/games-ascii"
 
+#define BRICK_SYMBOL	'#'
+
 JHAnsi		g_Ansi;
 JHTetrisExt	g_Tetris;
 
