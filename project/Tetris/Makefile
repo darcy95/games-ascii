@@ -16,5 +16,5 @@ $(OBJ) : $(SRC)
 	$(CC) -c $(SRC) -I$(INCDIR) -o $(OBJ)
 
 clean:
-	$(RM) *.o
+	$(RM) $(OBJ)
 	$(RM) $(EXE)

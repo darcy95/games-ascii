@@ -13,14 +13,11 @@
  */
 
 
-#include "common/StdAfx.h"
-#include "common/Class_TicTacToe.h"
-#include "common/Class_Ansi.h"
-#include "common/Func_Inputk.h"
+#include "tictactoe.h"
 
 #define	PROGRAM_NAME	"TicTacToe"
-#define PROGRAM_VER		"Ver, 1.0"
-#define PROGRAM_URL		"https://www.github.com/darcy95/games-ascii"
+#define PROGRAM_VER	"Ver, 1.0"
+#define PROGRAM_URL	"https://www.github.com/darcy95/games-ascii"
 
 #define OFFSET_GAME_X	1
 #define OFFSET_GAME_Y	3

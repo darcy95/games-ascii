@@ -1,20 +1,20 @@
-LIBDIR      =  ../../
-Compiler	= g++
-LibDir		= -L$(LIBDIR)lib 
-IncDir		= -I$(LIBDIR)include -I$(LIBDIR)src
-Linker		= -lpthread
-Del			= rm -rf
-SrcFile		= TicTacToe.cpp
-ObjFile		= TicTacToe.o
-ExeFile		= TicTacToe
+BASE      	= ../..
+CC		= g++
+LIBDIR		= $(BASE)/lib 
+INCDIR		= $(BASE)/inc
+CFLAGS		= -Wl,-rpath,$(LIBDIR)
+OPT		= -lpthread
+RM		= rm -rf
+SRC		= TicTacToe.cpp
+OBJ		= TicTacTow.o
+EXE		= TicTacToe
 
-$(ExeFile) : $(ObjFile)
-	$(Del) $(ExeFile)
-	$(Compiler) $(ObjFile) -o $(ExeFile) $(Linker)
-	$(Del) $(ObjFile)
+$(EXE) : $(OBJ)
+	$(CC) $(CFLAGS) -L$(LIBDIR) -I$(INCDIR) $(OPT) $(CFLAGS) $(OBJ) -o $(EXE) -ltictactoe
 
-$(ObjFile) : $(SrcFile)
-	$(Compiler) -c $(SrcFile) $(IncDir) $(LibDir) -o $(ObjFile)
+$(OBJ) : $(SRC)
+	$(CC) -c $(SRC) -I$(INCDIR) -o $(OBJ)
 
 clean :
-	$(Del) $(ObjFile)
+	$(RM) $(OBJ)
+	$(RM) $(EXE)

@@ -13,10 +13,7 @@
  */
 
 
-#include "common/StdAfx.h"
-#include "common/Class_Snake.h"
-#include "common/Class_Ansi.h"
-#include "common/Func_Inputk.h"
+#include "snake.h"
 
 #define	PROGRAM_NAME	"SNAKE"
 #define PROGRAM_VER		"Ver, 1.0"

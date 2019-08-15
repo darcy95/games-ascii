@@ -24,11 +24,7 @@
  *
  */
 
-#include "common/StdAfx.h"
-#include "common/Class_Poker.h"
-#include "common/Class_Ansi.h"
-#include "common/Func_Inputk.h"
-#include "Class_PokerExt.h"
+#include "poker.h"
 
 JHAnsi		g_Ansi;
 JHPokerExt	g_Poker;

@@ -1,20 +1,20 @@
-LIBDIR      =  ../../
-Compiler	= g++
-LibDir		= -L$(LIBDIR)lib 
-IncDir		= -I$(LIBDIR)include -I$(LIBDIR)src
-Linker		= -lpthread
-Del		= rm -rf
-SrcFile		= Snake.cpp
-ObjFile		= Snake.o
-ExeFile		= Snake
+BASE      	= ../..
+CC		= g++
+LIBDIR		= $(BASE)/lib 
+INCDIR		= $(BASE)/inc
+CFLAGS		= -Wl,-rpath,$(LIBDIR)
+OPT		= -lpthread
+RM		= rm -rf
+SRC		= Snake.cpp
+OBJ		= Snake.o
+EXE		= Snake
 
-$(ExeFile) : $(ObjFile)
-	$(Del) $(ExeFile)
-	$(Compiler) $(ObjFile) -o $(ExeFile) $(Linker)
-	$(Del) $(ObjFile)
+$(EXE) : $(OBJ)
+	$(CC) $(CFLAGS) -L$(LIBDIR) -I$(INCDIR) $(OPT) $(CFLAGS) $(OBJ) -o $(EXE) -lsnake
 
-$(ObjFile) : $(SrcFile)
-	$(Compiler) -c -g $(SrcFile) $(IncDir) $(LibDir) -o $(ObjFile)
+$(OBJ) : $(SRC)
+	$(CC) -c $(SRC) -I$(INCDIR) -o $(OBJ)
 
 clean :
-	$(Del) $(ObjFile)
+	$(RM) $(OBJ)
+	$(RM) $(EXE)
